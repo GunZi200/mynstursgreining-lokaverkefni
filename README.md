@@ -10,3 +10,11 @@
 
 
 Gögn (8GB): https://data.matr.io/1/projects/5c48dd2bc625d700019f3204
+
+
+Notum (líklegast):
+
+* Keras: https://keras.io/datasets/
+* Tensorflow 2: https://blog.tensorflow.org/
+
+Keras og Tensorflow 2 leyfa eins og er bara Python 3.7 (ég nota 3.7.4, en t.d. 3.8.2 virkar ekki)
