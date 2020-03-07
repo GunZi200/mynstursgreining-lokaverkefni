@@ -1,5 +1,6 @@
-# mynstursgreining-lokaverkefni
-Áætla líftíma rafhlaðna
+# Mynstursgreining Lokaverkefni
+
+## Áætla líftíma rafhlaðna
 
 Þetta verkefni byggist að miklum hluta á eftirfarandi tveimur greinum: 
 
