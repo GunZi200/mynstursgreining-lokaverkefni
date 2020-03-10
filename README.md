@@ -18,3 +18,11 @@ Notum (líklegast):
 * Tensorflow 2: https://blog.tensorflow.org/
 
 Keras og Tensorflow 2 leyfa eins og er bara Python 3.7 (ég nota 3.7.4, en t.d. 3.8.2 virkar ekki)
+
+## Setup
+ - [Tensorflow: Tensorboard](https://www.tensorflow.org/tensorboard) 
+ - [Tensorflow: Hyperparameter tuning with HParams](https://www.tensorflow.org/tensorboard/hyperparameter_tuning_with_hparams) 
+ - [tf.data: Build TensorFlow input pipelines](https://www.tensorflow.org/guide/data) 
+ 
+ 
+
