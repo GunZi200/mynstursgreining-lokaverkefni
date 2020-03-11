@@ -90,7 +90,9 @@ for i in range(num_cells):
     cell_dict = {'cycle_life': cl, 'charge_policy':policy, 'summary': summary, 'cycles': cycle_dict}
     key = 'b1c' + str(i)
     bat_dict1[key]=   cell_dict
-bat_dict1.keys()
+print(bat_dict1.keys())
+
+# %%
 
 #remove batteries that do not reach 80% capacity
 del bat_dict1['b1c8']
@@ -99,6 +101,8 @@ del bat_dict1['b1c12']
 del bat_dict1['b1c13']
 del bat_dict1['b1c22']
 
+# %%
+
 # There are four cells from batch1 that carried into batch2, we'll remove the data from batch2
 # and put it with the correct cell from batch1
 batch2_keys = ['b2c7', 'b2c8', 'b2c9', 'b2c15', 'b2c16']
@@ -106,21 +110,21 @@ batch1_keys = ['b1c0', 'b1c1', 'b1c2', 'b1c3', 'b1c4']
 add_len = [662, 981, 1060, 208, 482];
 
 for i, bk in enumerate(batch1_keys):
-    batch1[bk]['cycle_life'] = batch1[bk]['cycle_life'] + add_len[i]
-    for j in batch1[bk]['summary'].keys():
+    bat_dict1[bk]['cycle_life'] = bat_dict1[bk]['cycle_life'] + add_len[i]
+    for j in bat_dict1[bk]['summary'].keys():
         if j == 'cycle':
-            batch1[bk]['summary'][j] = np.hstack((batch1[bk]['summary'][j], batch2[batch2_keys[i]]['summary'][j] + len(batch1[bk]['summary'][j])))
+            bat_dict1[bk]['summary'][j] = np.hstack((bat_dict1[bk]['summary'][j], bat_dict2[batch2_keys[i]]['summary'][j] + len(bat_dict1[bk]['summary'][j])))
         else:
-            batch1[bk]['summary'][j] = np.hstack((batch1[bk]['summary'][j], batch2[batch2_keys[i]]['summary'][j]))
-    last_cycle = len(batch1[bk]['cycles'].keys())
-    for j, jk in enumerate(batch2[batch2_keys[i]]['cycles'].keys()):
-        batch1[bk]['cycles'][str(last_cycle + j)] = batch2[batch2_keys[i]]['cycles'][jk]
+            bat_dict1[bk]['summary'][j] = np.hstack((bat_dict1[bk]['summary'][j], bat_dict2[batch2_keys[i]]['summary'][j]))
+    last_cycle = len(bat_dict1[bk]['cycles'].keys())
+    for j, jk in enumerate(bat_dict2[batch2_keys[i]]['cycles'].keys()):
+        bat_dict1[bk]['cycles'][str(last_cycle + j)] = bat_dict2[batch2_keys[i]]['cycles'][jk]
 
-del batch2['b2c7']
-del batch2['b2c8']
-del batch2['b2c9']
-del batch2['b2c15']
-del batch2['b2c16']
+del bat_dict2['b2c7']
+del bat_dict2['b2c8']
+del bat_dict2['b2c9']
+del bat_dict2['b2c15']
+del bat_dict2['b2c16']
 
 with open('batch1.pkl','wb') as fp:
         pickle.dump(bat_dict1,fp)
@@ -174,12 +178,12 @@ for i in range(num_cells):
 bat_dict3.keys()
 
 # remove noisy channels from batch3
-del batch3['b3c37']
-del batch3['b3c2']
-del batch3['b3c23']
-del batch3['b3c32']
-del batch3['b3c38']
-del batch3['b3c39']
+del bat_dict3['b3c37']
+del bat_dict3['b3c2']
+del bat_dict3['b3c23']
+del bat_dict3['b3c32']
+del bat_dict3['b3c38']
+del bat_dict3['b3c39']
 
 with open('batch3.pkl','wb') as fp:
         pickle.dump(bat_dict3,fp)
