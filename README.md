@@ -26,4 +26,12 @@ Keras og Tensorflow 2 leyfa eins og er bara Python 3.7 (ég nota 3.7.6, en t.d. 
  - [tf.data: Build TensorFlow input pipelines](https://www.tensorflow.org/guide/data) 
  
  
+## Process the data
+Tekið úr towards data science greininni.
+> 1. Take the voltage range during discharging as the reference instead of time!
+> For this cell model, 3.6V and 2.0V always correspond to fully charged and discharged. This range stays constant, even when time doesn’t.
+> 2. Interpolate charge and temperature over voltage.
+> 3. Resample charge and temperature at 1000 equidistant voltage steps.
 
+## Set up the framework
+Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
