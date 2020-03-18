@@ -34,6 +34,11 @@ Tekið úr towards data science greininni.
 > 3. Resample charge and temperature at 1000 equidistant voltage steps.
 
 ## Set up the framework
+tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/functional). 
+
+
+
+## Develop the model
 Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
 
 ![CNN](https://miro.medium.com/max/1250/0*MY2QgQAqk9oHaCNM)
