@@ -42,3 +42,5 @@ tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/funct
 Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
 
 ![CNN](https://miro.medium.com/max/1250/0*MY2QgQAqk9oHaCNM)
+
+* Hvað er max pooling?: https://computersciencewiki.org/index.php/Max-pooling_/_Pooling
