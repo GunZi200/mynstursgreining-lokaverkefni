@@ -35,3 +35,5 @@ Tekið úr towards data science greininni.
 
 ## Set up the framework
 Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
+
+![CNN](https://miro.medium.com/max/1250/0*MY2QgQAqk9oHaCNM)
