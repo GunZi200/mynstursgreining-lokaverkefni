@@ -20,13 +20,18 @@ Notum (líklegast):
 
 Keras og Tensorflow 2 leyfa eins og er bara Python 3.7 (ég nota 3.7.6, en t.d. 3.8.2 virkar ekki)
 
-## Setup
+## Uppsetning
  - [Tensorflow: Tensorboard](https://www.tensorflow.org/tensorboard) 
  - [Tensorflow: Hyperparameter tuning with HParams](https://www.tensorflow.org/tensorboard/hyperparameter_tuning_with_hparams) 
  - [tf.data: Build TensorFlow input pipelines](https://www.tensorflow.org/guide/data) 
  
+## Skilningur á gögnum
+
+Nefna hérna hverskonar gögn eru inn í mælingum. Hvernig er þeim skipt upp.
+
+Hver rafhlaða er tæmd og hlöðuð þangað til að rýmdin hefur minnkað niður í 80% miðað við upphaflegu rýmd. 
  
-## Process the data
+## Meðhöndlun gagna
 Tekið úr towards data science greininni.
 > 1. Take the voltage range during discharging as the reference instead of time!
 > For this cell model, 3.6V and 2.0V always correspond to fully charged and discharged. This range stays constant, even when time doesn’t.
@@ -38,7 +43,7 @@ tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/funct
 
 
 
-## Develop the model
+## Þróa líkanið
 Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
 
 Höfundurinn hjá Towards Data Science notar hugtakið *window* mikið hérna. Hvað er *window*?:
