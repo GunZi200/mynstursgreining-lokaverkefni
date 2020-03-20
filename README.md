@@ -41,6 +41,27 @@ tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/funct
 ## Develop the model
 Hérna setum við upp földunarnetið og skilgreinum vel hvernig við förum að því.
 
+Höfundurinn hjá Towards Data Science notar hugtakið *window* mikið hérna. Hvað er *window*?:
+> we took multiple consecutive charging cycles as input. These groups of cycles we call **windows**.
+
+Gögnin eru skipt í tvo hluta. Array features og Scalar features.
+
+**Array features:**
+1. window size, length, number of features
+2. Þessu er hent inn í 3 Conv2D lög með Max Pooling.
+3. Síðan er útkoman *Flattened* í 1D fylki.
+
+**Scalar features:**
+1. window size, number of features
+2. 2 Conv1D lög með einu Max pooling lagi í endan.
+3. Síðan er útkoman *Flattened* í 1D fylki.
+
+Þegar það er búið að fletja bæði, þá getum við sameinað gögnin og gert eitthvað með þau.
+
 ![CNN](https://miro.medium.com/max/1250/0*MY2QgQAqk9oHaCNM)
 
 * Hvað er max pooling?: https://computersciencewiki.org/index.php/Max-pooling_/_Pooling
+
+## Train and tune the model
+
+Hérna notar Toward Data Science Google Cloud en ég held að það sé of dýrt fyrir okkur. Það þarf aðra lausn.
