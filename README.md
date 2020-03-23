@@ -13,6 +13,8 @@ Gögn (8GB): https://data.matr.io/1/projects/5c48dd2bc625d700019f3204
 
 Github síðan þeirra: https://github.com/rdbraatz/data-driven-prediction-of-battery-cycle-life-before-capacity-degradation
 
+Github síðan frá þeim sem skrifuðu Towards Data Science greinina: https://github.com/dsr-18/long-live-the-battery
+
 Notum (líklegast):
 
 * Keras: https://keras.io/datasets/
