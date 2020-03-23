@@ -20,7 +20,7 @@ numBat = numBat1 + numBat2 + numBat3
 
 # sameinum skrárnar í eitt dictionary
 bat_dict = {**batch1, **batch2, **batch3}
-plt.plot(bat_dict['b1c43']['summary']['V'], bat_dict['b1c43']['summary']['QD'])
+#plt.plot(bat_dict['b1c43']['summary']['V'], bat_dict['b1c43']['summary']['QD'])
 # %%
 """
 for i in bat_dict.keys():
