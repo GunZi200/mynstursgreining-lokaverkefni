@@ -74,15 +74,15 @@ for i in range(num_cells):
     cycles = f1[batch1['cycles'][i,0]]
     cycle_dict = {}
     for j in range(cycles['I'].shape[0]):
-        I = np.hstack((f1[cycles['I'][j,0]].value))
-        Qc = np.hstack((f1[cycles['Qc'][j,0]].value))
+        I = np.hstack((f1[cycles['I'][j,0]][()]))
+        Qc = np.hstack((f1[cycles['Qc'][j,0]][()]))
         Qd = np.hstack((f1[cycles['Qd'][j,0]][()]))
-        Qdlin = np.hstack((f1[cycles['Qdlin'][j,0]].value))
+        Qdlin = np.hstack((f1[cycles['Qdlin'][j,0]][()]))
         T = np.hstack((f1[cycles['T'][j,0]][()]))
-        Tdlin = np.hstack((f1[cycles['Tdlin'][j,0]].value))
+        Tdlin = np.hstack((f1[cycles['Tdlin'][j,0]][()]))
         V = np.hstack((f1[cycles['V'][j,0]][()]))
-        dQdV = np.hstack((f1[cycles['discharge_dQdV'][j,0]].value))
-        t = np.hstack((f1[cycles['t'][j,0]].value))
+        dQdV = np.hstack((f1[cycles['discharge_dQdV'][j,0]][()]))
+        t = np.hstack((f1[cycles['t'][j,0]][()]))
         cd = {'I': I, 'Qc': Qc, 'Qd': Qd, 'Qdlin': Qdlin, 'T': T, 'Tdlin': Tdlin, 'V':V, 'dQdV': dQdV, 't':t}
         cd = {'Qd': Qd, 'T': T, 'V':V}
         cycle_dict[str(j)] = cd
@@ -159,15 +159,15 @@ for i in range(num_cells):
     cycles = f3[batch3['cycles'][i,0]]
     cycle_dict = {}
     for j in range(cycles['I'].shape[0]):
-        I = np.hstack((f3[cycles['I'][j,0]].value))
-        Qc = np.hstack((f3[cycles['Qc'][j,0]].value))
+        I = np.hstack((f3[cycles['I'][j,0]][()]))
+        Qc = np.hstack((f3[cycles['Qc'][j,0]][()]))
         Qd = np.hstack((f3[cycles['Qd'][j,0]][()]))
-        Qdlin = np.hstack((f3[cycles['Qdlin'][j,0]].value))
+        Qdlin = np.hstack((f3[cycles['Qdlin'][j,0]][()]))
         T = np.hstack((f3[cycles['T'][j,0]][()]))
-        Tdlin = np.hstack((f3[cycles['Tdlin'][j,0]].value))
+        Tdlin = np.hstack((f3[cycles['Tdlin'][j,0]][()]))
         V = np.hstack((f3[cycles['V'][j,0]][()]))
-        dQdV = np.hstack((f3[cycles['discharge_dQdV'][j,0]].value))
-        t = np.hstack((f3[cycles['t'][j,0]].value))
+        dQdV = np.hstack((f3[cycles['discharge_dQdV'][j,0]][()]))
+        t = np.hstack((f3[cycles['t'][j,0]][()]))
         cd = {'I': I, 'Qc': Qc, 'Qd': Qd, 'Qdlin': Qdlin, 'T': T, 'Tdlin': Tdlin, 'V':V, 'dQdV': dQdV, 't':t}
         #cd = {'Qd': Qd, 'T': T, 'V':V}
         cycle_dict[str(j)] = cd
