@@ -70,3 +70,9 @@ Gögnin eru skipt í tvo hluta. Array features og Scalar features.
 ## Train and tune the model
 
 Hérna notar Toward Data Science Google Cloud en ég held að það sé of dýrt fyrir okkur. Það þarf aðra lausn.
+
+### Google Cloud AI Platform:
+*  [Technical Overview](https://cloud.google.com/ai-platform/docs/technical-overview) 
+*  [Getting started: Training and Prediction with Keras](https://cloud.google.com/ai-platform/docs/getting-started-keras)
+*  [Getting started: Training and Prediction with TensorFlow Estimator](https://cloud.google.com/ai-platform/docs/getting-started-tensorflow-estimator) 
+
