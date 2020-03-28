@@ -40,6 +40,25 @@ Tekið úr towards data science greininni.
 > 2. Interpolate charge and temperature over voltage.
 > 3. Resample charge and temperature at 1000 equidistant voltage steps.
 
+Set þetta hér því þetta lýsir gögnunum vel:
+
+* ["b1c1"]
+  - ["cycle_life"]
+  - ["summary"]
+    * ["IR"]
+    * ["QD"]
+    * ["remaining_cycle_life"]
+    * ["high_current_discharging_time]
+  - ["cycles"]
+    * ["1"]
+      - ["Qd_resample"]
+      - ["T_resample"]
+      - ["V_resample"]
+    * ["2"] ...
+    * ["3"] ...
+    
+* ["b1c2"] ...
+
 ## Set up the framework
 tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/functional). 
 
@@ -73,8 +92,10 @@ Gögnin eru skipt í tvo hluta. Array features og Scalar features.
 
 Hérna notar Toward Data Science Google Cloud en ég held að það sé of dýrt fyrir okkur. Það þarf aðra lausn.
 
-### Google Cloud AI Platform:
-*  [Technical Overview](https://cloud.google.com/ai-platform/docs/technical-overview) 
-*  [Getting started: Training and Prediction with Keras](https://cloud.google.com/ai-platform/docs/getting-started-keras)
-*  [Getting started: Training and Prediction with TensorFlow Estimator](https://cloud.google.com/ai-platform/docs/getting-started-tensorflow-estimator) 
+### Google Colab
 
+* Hægt að nota með Github.
+* Getum keyrt notebooks í gegnum vefsíðuna.
+* Getum sett stór gögn á síðuna.
+* Google hefur hraðari tölvur.
+* Þjónustan er frí.
