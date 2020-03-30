@@ -32,32 +32,17 @@ Keras og Tensorflow 2 leyfa eins og er bara Python 3.7 (ég nota 3.7.6, en t.d. 
 Nefna hérna hverskonar gögn eru inn í mælingum. Hvernig er þeim skipt upp.
 
 Hver rafhlaða er tæmd og hlöðuð þangað til að rýmdin hefur minnkað niður í 80% miðað við upphaflegu rýmd. 
- 
-## Meðhöndlun gagna
+
+## Forvinnsla
+### Meðhöndlun gagna
 Tekið úr towards data science greininni.
 > 1. Take the voltage range during discharging as the reference instead of time!
 > For this cell model, 3.6V and 2.0V always correspond to fully charged and discharged. This range stays constant, even when time doesn’t.
 > 2. Interpolate charge and temperature over voltage.
 > 3. Resample charge and temperature at 1000 equidistant voltage steps.
 
-Set þetta hér því þetta lýsir gögnunum vel:
-
-* ["b1c1"]
-  - ["cycle_life"]
-  - ["summary"]
-    * ["IR"]
-    * ["QD"]
-    * ["remaining_cycle_life"]
-    * ["high_current_discharging_time]
-  - ["cycles"]
-    * ["1"]
-      - ["Qd_resample"]
-      - ["T_resample"]
-      - ["V_resample"]
-    * ["2"] ...
-    * ["3"] ...
-    
-* ["b1c2"] ...
+### Gögn eftir forvinnslu
+<img src="https://i.imgur.com/WgooROp.png" height="600">
 
 ## Set up the framework
 tf.Keras using the [functional API](https://www.tensorflow.org/guide/keras/functional). 
